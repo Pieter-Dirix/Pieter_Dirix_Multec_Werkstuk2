@@ -1,0 +1,22 @@
+/* 
+  strings.strings
+  werkstuk2
+
+  Created by Pieter on 13/05/18.
+  Copyright © 2018 Pieter. All rights reserved.
+*/
+
+"Villo" = "Villo";
+"info" = "info";
+"Detail" = "Detail";
+"Adres" = "Adres";
+"Status" = "Status";
+"Fietsenrekken:" = "Fietsenrekken:";
+"Waarvan beschikbaar:" = "Waarvan beschikbaar:";
+"Beschikbare Fietsen:" = "Beschikbare Fietsen:";
+"Laatst Geupdate:" = "Laatst Geupdate:";
+"core data update" = "Core Data laatst geupdate op:";
+"Update Core Data" = "Update Core Data";
+"Huidige Taal" = "Huidige Taal";
+"Taal" = "NL";
+"Info" = "Info";

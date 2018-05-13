@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "31n-BP-Gbn"; */
+"31n-BP-Gbn.text" = "Label";
+
+/* Class = "UILabel"; text = "NL"; ObjectID = "6s9-65-DRY"; */
+"6s9-65-DRY.text" = "ENG";
+
+/* Class = "UIBarButtonItem"; title = "Info"; ObjectID = "9jo-In-VIe"; */
+"9jo-In-VIe.title" = "Info";
+
+/* Class = "UILabel"; text = "Beschikbare Fietsen:"; ObjectID = "GhC-8C-7qN"; */
+"GhC-8C-7qN.text" = "Available Bikes:";
+
+/* Class = "UIButton"; normalTitle = "Update Core Data"; ObjectID = "HLn-rJ-yS4"; */
+"HLn-rJ-yS4.normalTitle" = "Update Core Data";
+
+/* Class = "UILabel"; text = "Core Data laatst geupdate op:"; ObjectID = "Lhx-m4-NEE"; */
+"Lhx-m4-NEE.text" = "Core Data last updated at:";
+
+/* Class = "UINavigationItem"; title = "Villo"; ObjectID = "Mkq-bP-Nl2"; */
+"Mkq-bP-Nl2.title" = "Villo";
+
+/* Class = "UILabel"; text = "Fietsenrekken:"; ObjectID = "UpS-Nw-7du"; */
+"UpS-Nw-7du.text" = "Bike Racks:";
+
+/* Class = "UILabel"; text = "Waarvan beschikbaar:"; ObjectID = "enH-PP-1BA"; */
+"enH-PP-1BA.text" = "Of Which Available:";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "g4Z-xn-H5J"; */
+"g4Z-xn-H5J.title" = "Detail";
+
+/* Class = "UILabel"; text = "Laatste update: "; ObjectID = "gjX-pr-rfd"; */
+"gjX-pr-rfd.text" = "Last Updated: ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hNE-Ex-zQn"; */
+"hNE-Ex-zQn.text" = "Label";
+
+/* Class = "UILabel"; text = "OPEN"; ObjectID = "kGD-hC-ObH"; */
+"kGD-hC-ObH.text" = "OPEN";
+
+/* Class = "UILabel"; text = "14"; ObjectID = "laP-j0-IPi"; */
+"laP-j0-IPi.text" = "14";
+
+/* Class = "UILabel"; text = "Adres:"; ObjectID = "mcM-OH-v3c"; */
+"mcM-OH-v3c.text" = "Address:;
+
+/* Class = "UIViewController"; title = "Info"; ObjectID = "okt-KS-dmN"; */
+"okt-KS-dmN.title" = "Info";
+
+/* Class = "UILabel"; text = "26"; ObjectID = "tms-5M-HNO"; */
+"tms-5M-HNO.text" = "26";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "tyh-Ae-buh"; */
+"tyh-Ae-buh.text" = "Status:";
+
+/* Class = "UILabel"; text = "Huidige Taal:"; ObjectID = "wj1-Sp-0kh"; */
+"wj1-Sp-0kh.text" = "Current Language";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "xbl-vH-mSP"; */
+"xbl-vH-mSP.text" = "9";

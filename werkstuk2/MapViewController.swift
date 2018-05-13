@@ -13,28 +13,43 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapVIew: MKMapView!
+    @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var infoButton: UIBarButtonItem!
     let url = URL(string: "https://api.jcdecaux.com/vls/v1/stations?apiKey=6d5071ed0d0b3b68462ad73df43fd9e5479b03d6&contract=Bruxelles-Capitale")
     var urlRequest:URLRequest?
     let session = URLSession(configuration: URLSessionConfiguration.default)
     let stationFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Station")
+    
+    
     var locationManager = CLLocationManager()
     
     
     var stations:[Station] = []
     var annotations:[Annotation] = []
+    var selectedStation:Station?
     
     var managedContext:NSManagedObjectContext?
-
+    
+    var DataManager = DataManagerSingleton.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navBar.title = NSLocalizedString("Villo", comment: "")
+        infoButton.title = NSLocalizedString("Info", comment: "")
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-       
-        managedContext = appDelegate.persistentContainer.viewContext
         
-        webserviceData()
-        showStations(stations: stations)
+        DataManager.managedContext = appDelegate.persistentContainer.viewContext
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        DataManager.webserviceData(mapview: mapVIew, showMap: true)
+        
+        
+        //webserviceData()
+        //self.showStations(stations: stations)
+        
         
     }
 
@@ -43,7 +58,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webserviceData()-> Void {
+    /*func webserviceData()-> Void {
         clearSavedStations()
         urlRequest = URLRequest(url: url!)
         
@@ -94,6 +109,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             tempStation.contract_name = station["contract_name"] as? String
             tempStation.bike_stands = station["bike_stands"] as! Int16
             tempStation.available_bike_stands = station["available_bike_stands"] as! Int16
+            tempStation.available_bikes = station["available_bikes"] as! Int16
             tempStation.last_update = station["last_update"] as! Int64
           
         }
@@ -109,8 +125,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func getDataFromCore() -> Void {
-        
-        
         let returnedStations:[Station]
         
         do {
@@ -118,10 +132,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             stations = []
             for stat in returnedStations {
                 stations.append(stat)
+                print(stat.number)
+                print(stat.available_bikes)
             }
             
-           
-          
         } catch {
             fatalError("Fetch Failed \(error)")
         }
@@ -142,15 +156,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             fatalError("Failed to delete Staions \(error)")
         }
         
-    }
+    }*/
     
-    func showStations(stations: [Station]) -> Void {
+    /*func showStations(stations: [Station]) -> Void {
         print("here")
         for station in stations {
             let coordinate = CLLocationCoordinate2D(latitude: station.lat, longitude: station.long)
             let title = station.name!
             let annotation:Annotation = Annotation(coordinate: coordinate, title: title)
-            print(annotation.title!)
             annotations.append(annotation)
         }
         
@@ -158,21 +171,33 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.mapVIew.showAnnotations(annotations, animated: true)
         
         let center = CLLocationCoordinate2D(latitude: 50.849432, longitude: 4.354485)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
         
         mapVIew.setRegion(region, animated: true)
         
+    }*/
+    
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? Annotation { //credit voor deze lijn gaat naar https://stackoverflow.com/questions/37320485/swift-how-to-get-information-from-a-custom-annotation-on-clicked
+            for stat in DataManager.stations {
+                if stat.name == annotation.title {
+                    selectedStation = stat
+                }
+            }
+            self.performSegue(withIdentifier: "AnnotationSelected", sender: self)
+        }
+        
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AnnotationSelected" {
+            if let nextVC = segue.destination as? DetailViewController {
+                nextVC.station = self.selectedStation
+            }
+        }
     }
-    */
+   
 
 }
