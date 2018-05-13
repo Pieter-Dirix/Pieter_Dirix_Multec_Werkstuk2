@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F525B26E20A5A6C2009340D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525B26D20A5A6C2009340D8 /* AppDelegate.swift */; };
-		F525B27020A5A6C2009340D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525B26F20A5A6C2009340D8 /* ViewController.swift */; };
 		F525B27320A5A6C2009340D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525B27120A5A6C2009340D8 /* Main.storyboard */; };
 		F525B27620A5A6C2009340D8 /* werkstuk2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F525B27420A5A6C2009340D8 /* werkstuk2.xcdatamodeld */; };
 		F525B27820A5A6C3009340D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F525B27720A5A6C3009340D8 /* Assets.xcassets */; };
 		F525B27B20A5A6C3009340D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525B27920A5A6C3009340D8 /* LaunchScreen.storyboard */; };
 		F525B28620A5A6C4009340D8 /* werkstuk2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525B28520A5A6C4009340D8 /* werkstuk2Tests.swift */; };
 		F525B29120A5A6C4009340D8 /* werkstuk2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525B29020A5A6C4009340D8 /* werkstuk2UITests.swift */; };
+		F525B2A120A5D1F8009340D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525B2A020A5D1F8009340D8 /* MapViewController.swift */; };
+		F55F058720A8770800FB4245 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F058620A8770800FB4245 /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F525B26A20A5A6C2009340D8 /* werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werkstuk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F525B26D20A5A6C2009340D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F525B26F20A5A6C2009340D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F525B27220A5A6C2009340D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F525B27520A5A6C2009340D8 /* werkstuk2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = werkstuk2.xcdatamodel; sourceTree = "<group>"; };
 		F525B27720A5A6C3009340D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		F525B28C20A5A6C4009340D8 /* werkstuk2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = werkstuk2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F525B29020A5A6C4009340D8 /* werkstuk2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = werkstuk2UITests.swift; sourceTree = "<group>"; };
 		F525B29220A5A6C4009340D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F525B2A020A5D1F8009340D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F55F058620A8770800FB4245 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				F525B26D20A5A6C2009340D8 /* AppDelegate.swift */,
-				F525B26F20A5A6C2009340D8 /* ViewController.swift */,
+				F525B2A020A5D1F8009340D8 /* MapViewController.swift */,
 				F525B27120A5A6C2009340D8 /* Main.storyboard */,
 				F525B27720A5A6C3009340D8 /* Assets.xcassets */,
 				F525B27920A5A6C3009340D8 /* LaunchScreen.storyboard */,
 				F525B27C20A5A6C3009340D8 /* Info.plist */,
 				F525B27420A5A6C2009340D8 /* werkstuk2.xcdatamodeld */,
+				F55F058620A8770800FB4245 /* Annotation.swift */,
 			);
 			path = werkstuk2;
 			sourceTree = "<group>";
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F525B27020A5A6C2009340D8 /* ViewController.swift in Sources */,
 				F525B27620A5A6C2009340D8 /* werkstuk2.xcdatamodeld in Sources */,
+				F525B2A120A5D1F8009340D8 /* MapViewController.swift in Sources */,
+				F55F058720A8770800FB4245 /* Annotation.swift in Sources */,
 				F525B26E20A5A6C2009340D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
