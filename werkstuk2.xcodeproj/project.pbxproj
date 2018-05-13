@@ -120,12 +120,12 @@
 				F55F059820A8C3E400FB4245 /* DataManagerSingleton.swift */,
 				F55F058920A88B3800FB4245 /* DetailViewController.swift */,
 				F55F058D20A8BE9700FB4245 /* InfoViewController.swift */,
+				F55F058620A8770800FB4245 /* Annotation.swift */,
 				F525B27120A5A6C2009340D8 /* Main.storyboard */,
 				F525B27720A5A6C3009340D8 /* Assets.xcassets */,
 				F525B27920A5A6C3009340D8 /* LaunchScreen.storyboard */,
 				F525B27C20A5A6C3009340D8 /* Info.plist */,
 				F525B27420A5A6C2009340D8 /* werkstuk2.xcdatamodeld */,
-				F55F058620A8770800FB4245 /* Annotation.swift */,
 				F55F059520A8C28800FB4245 /* Localizable.strings */,
 			);
 			path = werkstuk2;

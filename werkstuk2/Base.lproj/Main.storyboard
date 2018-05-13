@@ -270,11 +270,16 @@
                     </view>
                     <connections>
                         <outlet property="lblAdres" destination="EyQ-s8-ZWm" id="ryk-7q-xe3"/>
+                        <outlet property="lblAdresTitel" destination="mcM-OH-v3c" id="rEb-Lm-Efm"/>
                         <outlet property="lblBeschikbareFietsen" destination="xbl-vH-mSP" id="Sma-9K-meJ"/>
+                        <outlet property="lblBeschikbareFietsenTitel" destination="GhC-8C-7qN" id="Uoy-3J-rix"/>
                         <outlet property="lblBeschikbareFietsenrekken" destination="laP-j0-IPi" id="ABw-jH-2l0"/>
+                        <outlet property="lblBeschikbareRekken" destination="enH-PP-1BA" id="Uv6-af-shW"/>
                         <outlet property="lblFietsenrekken" destination="tms-5M-HNO" id="YqX-lu-H7c"/>
+                        <outlet property="lblFietsenrekkenTitel" destination="UpS-Nw-7du" id="kg4-wt-2Ea"/>
                         <outlet property="lblNaam" destination="hNE-Ex-zQn" id="m0U-vS-4By"/>
                         <outlet property="lblStatus" destination="kGD-hC-ObH" id="SS2-4p-nyI"/>
+                        <outlet property="lblStatusTitel" destination="tyh-Ae-buh" id="YSa-cg-dAU"/>
                         <outlet property="lblUpdate" destination="gjX-pr-rfd" id="OFU-si-Fib"/>
                         <outlet property="mapView" destination="Iaa-K0-sSh" id="zqo-3h-ahQ"/>
                     </connections>

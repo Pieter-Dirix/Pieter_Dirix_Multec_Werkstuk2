@@ -22,17 +22,24 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lblAdres: UITextView!
     
+    @IBOutlet weak var lblAdresTitel: UILabel!
+    @IBOutlet weak var lblStatusTitel: UILabel!
+    @IBOutlet weak var lblFietsenrekkenTitel: UILabel!
+    
+    @IBOutlet weak var lblBeschikbareRekken: UILabel!
+    @IBOutlet weak var lblBeschikbareFietsenTitel: UILabel!
     
     var station:Station?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Detail", comment: "")
-        lblStatus.text = NSLocalizedString("Status", comment: "")
-        lblFietsenrekken.text = NSLocalizedString("Fietsenrekken", comment: "")
-        lblBeschikbareFietsenrekken.text = NSLocalizedString("Waarvan Beschikbaar", comment: "")
-        lblBeschikbareFietsen.text = NSLocalizedString("Beschikbare Fietsen", comment: "")
+        lblAdresTitel.text = NSLocalizedString("Adres", comment: "")
+        lblStatusTitel.text = NSLocalizedString("Status", comment: "")
+        lblFietsenrekkenTitel.text = NSLocalizedString("Fietsenrekken:", comment: "")
+        lblBeschikbareRekken.text = NSLocalizedString("Waarvan beschikbaar:", comment: "")
         
+        lblBeschikbareFietsenTitel.text = NSLocalizedString("Beschikbare Fietsen:", comment: "")
         lblAdres.isEditable = false
         lblAdres.isSelectable = true
         setStationDataToLabels()
@@ -73,7 +80,7 @@ class DetailViewController: UIViewController {
         let yourDate = formatter.date(from: myString)
         let myStringafd = formatter.string(from: yourDate!)
         
-        lblUpdate.text = "Laatst geupdate: " + myStringafd
+        lblUpdate.text = NSLocalizedString("Laatst Geupdate:", comment: "") + " " + myStringafd
     }
     
     func showAnnotation() ->Void {
@@ -88,15 +95,5 @@ class DetailViewController: UIViewController {
         
         mapView.setRegion(region, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
